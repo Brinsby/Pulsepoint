@@ -1,0 +1,46 @@
+{
+    "api_key": "AIzaSyCrXxjIg4jwJztl6kNDxK9dgpWBofvL1xE",
+    "pushover_token": "AIzaSyCrXxjIg4jwJztl6kNDxK9dgpWBofvL1xE",
+    "pushover_user": "AIzaSyCrXxjIg4jwJztl6kNDxK9dgpWBofvL1xE",
+    "scan_interval": "1m",
+    "radius_default": "100mi",
+    "agencies": [
+        {    
+            "name": "Allegheny County Emergency Services"
+        },
+        {
+            "name": "Cameron County Office of Emergency Services"
+        },
+        {
+            "name": "Clarion County Department of Public Safety"
+        },
+        {
+            "name": "Clearfield County 911"
+        },
+        {
+            "name": "Crawford County Department of Public Safety"
+        },
+        {
+            "name": "Elk County Emergency Services"
+        },
+        {
+            "name": "Erie County"
+        },
+        {
+            "name": "Forest County"
+        },
+        {
+            "name": "Warren County Public Safety"
+        }
+    ],
+    "locations": [
+        {   "name": "Allegheny County",
+            "address": "22 Husler Pl, PA 15106",
+            "coords": [40.401106129138796, -80.07383846365313],
+            "filters": {
+                "allowed": ["Fire Alarm"],
+                "blocked": []
+            }
+        }
+    ]
+}
