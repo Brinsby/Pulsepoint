@@ -1,13 +1,14 @@
-# PulsepointScraperV2
-Scrapes pulsepoint.org for emergency incidents and notifies you if certain conditions are met.
+# Pulsepoint Scraper
+Scrapes pulsepoint.org for emergency incidents and notifies you if certain conditions are met. This is based off this project with some tweaks and modifications https://github.com/TrevorBagels/PulsepointScraperV2. 
 
 
 
 ## Installation
-1. Clone the repository `git clone https://github.com/TrevorBagels/PulsepointScraperV2.git`
-2. Navigate to the new directory `cd PulsepointScraperV2`
-3. Install requirements `pip3 install -r requirements.txt`
-4. Make sure to configure before using!
+0. Make sure you have python3 and mongodb compass installed on target machine. I am using python 3.8.5, and mongo 1.30.1, if you have chocolatey, `choco install python mongodb-compass -y`
+1. Clone the repository `git clone https://github.com/Brinsby/Pulsepoint.git`
+2. Navigate to the new directory `cd Pulsepoint`
+3. Install requirements `pip install -r requirements.txt`
+4. Make sure to configure before using! Current config is using a burner gmail account's keys but I am leaving it so it can just work for whoever installs this. 
 
 
 ## Configuration
@@ -20,7 +21,7 @@ For push notifications, you'll need [pushover](https://pushover.net/). Set the "
 [old configuration](https://github.com/TrevorBagels/PulsepointScraper/wiki/Configuration)
 
 ## Usage
-Run `python3 -m dev`, and it should work.
+Run `python -m dev`, and it should work.
 
 
 ## FAQ
@@ -49,8 +50,6 @@ Incident types can be found under `/dev/core/incident_types.json`.
 PulsePoint DB is a "sub project" where instead of monitoring specific locations, I monitor every single agency, scanning each one every twelve hours. It doesn't scan and scrape from them all at once, instead it generates a schedule so that its API calls are distributed evenly throughout each day. After scanning an agency, it collects all the information about each incident and inserts it into a MongoDB database collection. 
 
 To use the program, create a mongoDB database called "pulsepoint", and then run 
-`python3 -m dev.ppdb`
+`python -m dev.ppdb`
 
 Additional configuration options are available in `dbconfig.json`
-
-4
